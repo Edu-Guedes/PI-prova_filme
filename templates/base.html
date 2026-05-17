@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block titulo%}{%endblock%}</title>
+    {%block css%}{%endblock%}
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Header Superior -->
+        {% include 'header.html' %}
+        
+
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href=" url 'home.html " class="nav-item active">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="{% url 'filmes:lista_de_filmes' %}" class="nav-item">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-text">Lista de Itens</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">➕</span>
+                    <span class="nav-text">Adicionar Novo</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Relatórios</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Configurações</span>
+                </a>
+            </nav>
+        </aside>
+        {%block content%}
+        {%endblock%}
+    </div>
+</body>
+</html>

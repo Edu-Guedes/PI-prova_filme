@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{%block titulo%}lista{%endblock%}
+{%block css%}<link rel="stylesheet" href="{% static 'filmes/css/lista.css' %}">{%endblock%}
+
+{%block content%}
+        
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <div class="content-header">
+                <div class="breadcrumb">
+                    <a href="#">Início</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current">Lista de Itens</span>
+                </div>
+                <h2 class="page-title">Lista de Itens</h2>
+            </div>
+
+            <div class="list-controls">
+                <div class="search-box-container">
+                    <input type="text" class="search-box" placeholder="🔍 Buscar itens...">
+                </div>
+                <button class="btn btn-primary btn-add">
+                    <span class="btn-icon">➕</span>
+                    Adicionar Novo
+                </button>
+            </div>
+            <div class="items-container">
+            <div class="item-card">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Harry Potter e o Prisioneiro de Azkaban</h3>
+                            <span class="item-badge">Fantasia / Aventura</span>
+                        </div>
+                        <p class="item-description">Harry retorna a Hogwarts para seu segundo ano e descobre a existência de uma câmara secreta que foi aberta, liberando uma criatura que ameaça os alunos da escola.</p>
+                        <div class="item-meta">
+                            <span class="meta-item">📅 2004</span>
+                            <span class="meta-item">👤 J. K. Rowling</span>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <a href="{% url 'filmes:detalhes_do_filme' %}" class="btn-action btn-view" title="Ver detalhes">
+                            <span>👁️</span>
+                        </a>
+                        <a href="#" class="btn-action btn-edit" title="Editar">
+                            <span>✏️</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Harry Potter e a Pedra Filosofal</h3>
+                            <span class="item-badge">Fantasia / Aventura</span>
+                        </div>
+                        <p class="item-description">Harry Potter descobre que é um bruxo no seu 11º aniversário e é levado para estudar na escola de magia Hogwarts, onde começa sua jornada contra forças das trevas.</p>
+                        <div class="item-meta">
+                            <span class="meta-item">📅 2001</span>
+                            <span class="meta-item">👤 J. K. Rowling</span>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <a href="{% url 'filmes:detalhes_do_filme' %}" class="btn-action btn-view" title="Ver detalhes">
+                            <span>👁️</span>
+                        </a>
+                        <a href="#" class="btn-action btn-edit" title="Editar">
+                            <span>✏️</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-title">Harry Potter e a Câmara Secreta</h3>
+                            <span class="item-badge">Fantasia / Aventura</span>
+                        </div>
+                        <p class="item-description">Harry retorna a Hogwarts para seu segundo ano e descobre a existência de uma câmara secreta que foi aberta, liberando uma criatura que ameaça os alunos da escola.</p>
+                        <div class="item-meta">
+                            <span class="meta-item">📅 2002</span>
+                            <span class="meta-item">👤 J. K. Rowling</span>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <a href="{% url 'filmes:detalhes_do_filme' %}" class="btn-action btn-view" title="Ver detalhes">
+                            <span>👁️</span>
+                        </a>
+                        <a href="#" class="btn-action btn-edit" title="Editar">
+                            <span>✏️</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Mais itens devem ser gerados dinamicamente com loop -->
+            </div>
+        </main>
+{%endblock%}

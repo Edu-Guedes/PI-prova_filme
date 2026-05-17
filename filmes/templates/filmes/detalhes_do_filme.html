@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block titulo%}lista{%endblock%}
+{%block css%}<link rel="stylesheet" href="{% static 'filmes/css/detalhes.css' %}">{%endblock%}
+
+{%block content%}
+<!-- Conteúdo Principal -->
+<main class="main-content">
+    <div class="content-header">
+        <div class="breadcrumb">
+            <a href="{% url 'home' %}">Início</a>
+            <span class="breadcrumb-separator">/</span>
+            <a href="{% url 'filmes:lista_de_filmes' %}">Lista</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">Detalhes</span>
+        </div>
+    </div>
+
+    <div class="detail-container">
+        <div class="detail-hero">
+            <div class="detail-hero-content">
+                <h1 class="detail-title">Harry Potter e a Pedra Filosofal</h1>
+                <span class="detail-badge">Fantasia / Aventura</span>
+            </div>
+            <div class="detail-hero-actions">
+                <button class="btn btn-secondary">✏️ Editar</button>
+                <button class="btn btn-danger">🗑️ Excluir</button>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <div class="detail-section">
+                <h3 class="section-title">
+                    <span class="section-icon">📋</span>
+                    Informações Principais
+                </h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Ano: 2001</span>
+                        <span class="info-value">2001</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Diretor:</span>
+                        <span class="info-value">Chris Columbus</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Baseado:</span>
+                        <span class="info-value">livro de J.K. Rowling</span>
+                    </div>
+
+            </div>
+
+            <div class="detail-section">
+                <h3 class="section-title">
+                    <span class="section-icon">📝</span>
+                    Descrição
+                </h3>
+                <div class="description-box">
+                    <p>
+                        Harry Potter descobre que é um bruxo no seu 11º aniversário e é levado para estudar na escola de magia Hogwarts, onde começa sua jornada contra forças das trevas.
+                </div>
+            </div>
+
+            <div class="detail-section">
+                <h3 class="section-title">
+                    <span class="section-icon">ℹ️</span>
+                    Informações Adicionais
+                </h3>
+                <ul class="info-list">
+                    <li>Primeira aparição de Hogwarts no cinema</li>
+                    <li>Apresenta Hermione Granger e Ron Weasley</li>
+                    <li>Introduz Lord Voldemort na história</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="detail-footer">
+            <a href="{% url 'filmes:lista_de_filmes' %}" class="btn btn-outline">← Voltar para Lista</a>
+        </div>
+    </div>
+</main>
+{%endblock%}
